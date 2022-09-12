@@ -1,23 +1,31 @@
+#include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
+
 /**
- * main - printing numbers from 0-9 with commas and space between them
- * Description: using the main function
- * this program prints "0, 1, 2, 3, 4, 5, 6, 7, 8, 9"
- * Return: 0
- */
+ * main - writes 0-9
+ * @void: Empty parameter list for main.
+ *
+ * Description: Writes 0-9 with comma and space
+ *
+ * Return: 0 for success
+*/
+
 int main(void)
 {
-	int c;
+	int num = 48;
 
-	for (c = 48; c <= 57; c++)
+	while (num < 58)
 	{
-		putchar(c);
-		if (c != 57)
+		putchar(num);
+
+		if (num < 57)
 		{
 			putchar(',');
 			putchar(' ');
 		}
+		num++;
 	}
 	putchar('\n');
-	return (0);
+	return (0);
 }
