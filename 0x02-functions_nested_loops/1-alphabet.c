@@ -1,6 +1,6 @@
-#include "main.h"
+#include "holberton.h"
 
-/** 
+/**
  * print_alphabet - prints lower case alphabet
  *
  **/
