@@ -3,10 +3,10 @@
 /**
  * jack_bauer - prints all minutes of the day
  * @void: first int to add
- *
+ * 
  */
 
-void jack_bauer(void)
+ void jack_bauer(void)
 {
 	int hr;
 	int min;
