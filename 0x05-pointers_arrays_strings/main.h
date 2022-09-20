@@ -1,13 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/**
- * header - for all protoypes
- * void protoypes(void)
- * int protoypes(int)
- */
-
-
 void reset_to_98(int *n);
 int _putchar(char c);
 void swap_int(int *a, int *b);
@@ -20,5 +13,4 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
 
-#endif /*MAIN_H*/
-
+#endif
