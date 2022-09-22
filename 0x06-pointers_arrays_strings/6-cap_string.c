@@ -1,0 +1,61 @@
+#include "main.h"
+#include <stddef.h>
+#include <stdio.h>
+
+/**
+ * @c: pointer to a string
+ * Return: pointer to string
+ */
+
+char *upper(char *c)
+{
+	if (c[0] >= 'a' && c[0] <= 'z')
+		c[0] -= 32;
+	return (c);
+}
+
+/**
+ * new_word - compares char to chars that indicate a new word
+ * @c: char to check
+ * @c: char to check
+ */
+
+int new_word(char c)
+{
+	int i = 0;
+	char *word = " \t\n,;.!?\"(){}";
+
+	while (word[i] != '\0')
+	{
+		if (c == word[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+/**
+ * cap_string - capitalize all words in a string
+ * @str: string to modify
+ * Return: pointer to str
+ */
+
+char *cap_string(char *str)
+{
+	int i;
+
+	if (str == NULL)
+		return (NULL);
+	upper(str);
+	if (str[0] == '\0')
+		return (str);
+
+	for (i = 1; str[i] != '\0'; i++)
+	{
+		if (new_word(str[i - 1]) == 1)
+		{
+			upper(&str[i]);
+		}
+	}
+	return (str);
+}
