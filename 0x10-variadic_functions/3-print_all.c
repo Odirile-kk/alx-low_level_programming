@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include "variadic_functions.h"
 
 /**
@@ -8,7 +7,7 @@
  * @format: a list of types of arguments passed to the function
  *
  * return: no return
- */
+ **/
 
 void print_all(const char * const format, ...)
 {
@@ -17,7 +16,7 @@ void print_all(const char * const format, ...)
 	char *str;
 	const char t_arg[] = "cifs",
 
-	      va_start(valist, format);
+	 va_start(valist, format);
 	while (format && format[i])
 	{
 		j = 0;
@@ -27,7 +26,7 @@ void print_all(const char * const format, ...)
 			{
 				printf(", ");
 				break;
-			} j++;
+			}j++;
 			switch (format[i])
 			{
 			case 'c':
@@ -48,10 +47,7 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", str);
 				break;
-			} i++;
+			}i++;
 		}
 	}
 }
-
-					
-
