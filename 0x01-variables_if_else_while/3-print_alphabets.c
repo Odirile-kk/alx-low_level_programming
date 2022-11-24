@@ -1,33 +1,26 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
 
 /**
- * main - Prints alphabet
- * @void: Empty parameter list for main.
- *
- * Description: Prints the alphabet in lower and upper case
- * Can only use putchar
- *
- * Return: 0 for success
-*/
+ * main - assign a random number to the variable n each time it is executed
+ * and print the last digit of the number stored in the variable n
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
-	char letter = 'a';
+	int ch;
 
-	while (letter <= 'z')
+	for (ch = 97; ch <= 122; ch++)
 	{
-		putchar(letter);
-		letter++;
+		putchar(ch);
 	}
 
-	letter = 'A';
-
-	while (letter <= 'Z')
+	for (ch = 65; ch <= 90; ch++)
 	{
-		putchar(letter);
-		letter++;
+		putchar(ch);
 	}
-	putchar('\n');
-	return (0);
+
+	putchar(10);
+	return (0);
 }
+
