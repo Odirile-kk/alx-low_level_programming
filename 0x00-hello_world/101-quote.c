@@ -1,12 +1,16 @@
+#include <unistd.h>
 #include <stdio.h>
 
 /**
- * main - Prints quote
- *
- * Return: zero on success
- *
+ * main - prints exactly "and that piece of art is useful"
+ * - Dora Korpar, 2015-10-19,
+ * followed by a new line, to the standard error.
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	printf("and that piece of art is useful" - Dora Korpar, 2015-10-19,\n");
-	return (0);
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
+}
+
